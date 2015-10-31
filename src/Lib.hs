@@ -28,5 +28,5 @@ kochSnowFlake :: Int -> [V2 Double]
 kochSnowFlake n = iterateN 3 (rotateBy (4/6)) (kochLine n) # mconcat
 
 koch :: Int -> Colour Double -> Diagram B
-koch n colour = fromOffsets snowFlake # strokeLoop # lc colour # lw 0.01
+koch n colour = fromOffsets snowFlake # strokeLoop # lc colour # lw 0.5
   where snowFlake = kochSnowFlake n 
